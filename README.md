@@ -1,87 +1,54 @@
-# 90-days-python-backend-journey
-My 90-day journey to become a job-ready Python Backend Developer through Python, FastAPI, PostgreSQL, projects and interview preparation.
+# 90-Day Python Backend Developer Journey
 
-# 90 Days: Python Backend Developer Journey
+**Start:** 19 November 2026  
+**Day 90:** 16 February 2027  
+**Target:** Entry-level Python Backend Developer, Backend Intern/Trainee, Junior Python Developer, Associate Software Engineer (check degree eligibility).
 
-## My Goal
+## The goal
+Become able to independently build, test, explain, document and deploy Python REST APIs backed by PostgreSQL, and demonstrate that ability through two portfolio projects.
 
-Become job-ready for entry-level Python Backend Developer,
-Backend Developer Trainee, and Associate Software Engineer roles.
+This is a training plan, not a job guarantee. Hiring depends on your skill, interview performance, vacancies, eligibility and application quality.
 
-## Duration
-
-Start: 19 November 2026
-Target completion: 16 February 2027
-
-## Daily Study Target
-
-5 focused hours.
-
-## Technology Stack
-
-- Python
-- FastAPI
-- PostgreSQL
-- SQLAlchemy
-- Pydantic
-- Alembic
-- Pytest
-- Git and GitHub
+## Your stack (do not keep switching)
+- Python 3
+- FastAPI + Pydantic
+- PostgreSQL + SQLAlchemy 2
+- Alembic migrations
+- pytest
+- Git + GitHub
 - Docker
+- One deployment platform chosen when you reach deployment
 
-## Learning Priorities
+## How to use this repository
+1. Open `roadmap/90-day-roadmap.md` and follow the day range you are on.
+2. Open `daily-logs/daily-log-template.md`, copy it into the current week's file, and fill it honestly.
+3. Practise by writing code yourself. Watching a lesson does not count as completing a topic.
+4. Build the two projects in `projects/`. Do not copy a finished project from a tutorial.
+5. Use `job-search/application-tracker.csv` to track every application.
+6. Use `tracker.html` for the 90 clickable day boxes.
+7. At the end of each week, complete `roadmap/weekly-review-template.md`.
 
-1. Python programming
-2. Backend development
-3. REST API development
-4. Database engineering
-5. Testing and debugging
-6. Production fundamentals
-7. Data structures and algorithms
-8. Technical interviews
+## Five-hour study template
+- 60 min: Learn one concept from the primary resource.
+- 90 min: Code exercises without copying.
+- 90 min: Apply the concept to a project or a small practical build.
+- 40 min: SQL / DSA practice (adjust by phase).
+- 20 min: Recall, log, Git commit and plan tomorrow.
 
-## Portfolio Projects
+Take breaks outside these 300 focused minutes. If college makes five hours impossible, preserve sleep and use a minimum viable session rather than pretending you studied.
 
-### Project 1: Job Application Management API
-A backend application to manage job applications,
-users, application statuses and statistics.
+## Completion rule
+A topic is complete only when you can:
+- explain it in your own words;
+- write a small example without following a tutorial;
+- use it in a project where relevant;
+- debug a basic mistake.
 
-### Project 2: Inventory and Order Management API
-A backend application to manage products, stock,
-customers and orders.
+## Weekly milestones
+See `roadmap/90-day-roadmap.md`. Start job research early; start applying once you can demonstrate basic Python and a working API, not only in the final week.
 
-## Weekly Progress
-
-- [ ] Week 1
-- [ ] Week 2
-- [ ] Week 3
-- [ ] Week 4
-- [ ] Week 5
-- [ ] Week 6
-- [ ] Week 7
-- [ ] Week 8
-- [ ] Week 9
-- [ ] Week 10
-- [ ] Week 11
-- [ ] Week 12
-- [ ] Week 13
-
-## Job Preparation
-
-- [ ] Build a professional resume
-- [ ] Complete two backend projects
-- [ ] Publish projects on GitHub
-- [ ] Practise Python interviews
-- [ ] Practise SQL interviews
-- [ ] Practise backend interviews
-- [ ] Apply for internships and junior roles
-- [ ] Practise mock interviews
-
-## Daily Rules
-
-- Write code every day.
-- Practise without copying.
-- Build real backend features.
-- Track mistakes and solutions.
-- Commit completed work to GitHub.
-- Review progress every week.
+## Important safety rules
+- Never commit passwords, API keys, tokens, database URLs or `.env` files.
+- Use fictional data in portfolio projects.
+- Do not claim skills on your resume that you cannot demonstrate.
+- Check each job's degree eligibility. A B.Sc. may qualify for some roles but not roles restricted to B.E./B.Tech.

@@ -1,107 +1,91 @@
+# 90-Day Python Backend Roadmap
 
-# 90-Day Backend Developer Roadmap
+**Day 1:** 19 November 2026  
+**Day 90:** 16 February 2027  
+**Daily target:** 5 focused hours. This is a target, not a reason to sacrifice sleep.
 
-## Phase 1: Python and SQL Foundations
-Days 1-14
+## Rules
+- One stack only: Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, pytest, Git, Docker.
+- Learn a small concept, practise it, use it, explain it.
+- No tutorial copying. You may consult docs, but close the example and recreate it.
+- Commit meaningful work regularly.
+- Begin job research in Week 3 and applications as soon as you have a credible project foundation.
 
-- Python variables and data types
-- Conditions and loops
-- Functions
-- Lists, tuples, sets and dictionaries
-- File handling
-- Exception handling
-- Basic SQL
-- Coding exercises
+## Phase 1 — Python and SQL foundations (Days 1–14)
+**Learn:** variables, types, input/output, operators, conditionals, loops, functions, strings, lists, tuples, sets, dictionaries, basic exceptions, basic files; SQL SELECT, WHERE, ORDER BY, INSERT, UPDATE, DELETE.
 
-Outcome: Write basic Python programs independently.
+**Deliverables:** 20–30 small Python exercises; 20 SQL queries; a command-line expense or contact manager.
 
-## Phase 2: Programming and Problem Solving
-Days 15-28
+**Gate:** independently write a program using functions, collections, input and validation; explain basic SQL CRUD.
 
-- Object-oriented programming
-- Modules and packages
-- Comprehensions
-- DSA fundamentals
-- SQL joins
-- Database fundamentals
-- HTTP fundamentals
+## Phase 2 — Python programming and problem solving (Days 15–28)
+**Learn:** modules, imports, virtual environments, pip, exceptions, file handling, OOP basics, comprehensions, basic debugging, Git basics, SQL joins, grouping, primary/foreign keys, HTTP request/response, JSON, status codes.
 
-Outcome: Understand how Python programs and databases work.
+**Deliverables:** a small multi-file Python application; SQL practice file; explain GET/POST/PUT/PATCH/DELETE and common status codes.
 
-## Phase 3: FastAPI Backend Development
-Days 29-42
+**Gate:** build a small program split into modules; write SQL joins without copying.
 
-- FastAPI fundamentals
-- REST API design
-- HTTP methods and status codes
-- Routes and endpoints
-- Request and response validation
-- Pydantic
-- API documentation
+## Phase 3 — FastAPI and REST APIs (Days 29–42)
+**Learn:** FastAPI app, routes, path/query parameters, request bodies, Pydantic schemas, response models, status codes, validation, error handling, OpenAPI docs, routers, dependency injection basics.
 
-Outcome: Build a working REST API.
+**Deliverables:** first working API with in-memory data, then persist data if ready; test endpoints using Swagger UI or an API client.
 
-## Phase 4: PostgreSQL and SQLAlchemy
-Days 43-56
+**Job-search action:** prepare a one-page draft resume and identify 20 eligible internships/trainee/junior roles. Start applying when you can explain your first API honestly.
 
-- PostgreSQL
-- SQL queries
-- Relationships
-- SQLAlchemy 2
-- CRUD operations
-- Alembic migrations
-- Transactions and indexes
+**Gate:** create CRUD endpoints and explain request → validation → route → response.
 
-Outcome: Build a database-backed API.
+## Phase 4 — PostgreSQL and SQLAlchemy (Days 43–56)
+**Learn:** PostgreSQL setup, tables, constraints, relationships, joins, indexes basics, SQLAlchemy 2 models and sessions, CRUD, Alembic migrations, transactions and rollback.
 
-## Phase 5: Professional Backend Engineering
-Days 57-70
+**Deliverables:** Project 1 backed by PostgreSQL; migrations; documented schema; tests for important CRUD paths.
 
-- Authentication
-- Authorization
-- Password hashing
-- JWT
-- Pytest
-- API testing
-- Docker
-- Logging and error handling
+**Gate:** explain your database relationships and demonstrate a migration and transaction.
 
-Outcome: Build a secure and tested backend.
+## Phase 5 — Professional backend engineering (Days 57–70)
+**Learn:** password hashing, authentication vs authorization, JWT concepts, protected routes, ownership checks, configuration/environment variables, pytest, API tests, fixtures, logging, CORS basics, Docker and Docker Compose basics, safe error handling.
 
-## Phase 6: Second Project
-Days 71-77
+**Deliverables:** authentication and authorization in Project 1; tests; Docker setup; clean README and setup instructions.
 
-- Inventory management API
-- Product management
-- Stock management
-- Order processing
-- Database transactions
-- Documentation
+**Gate:** a second user cannot access another user's private records; tests pass; app can start from documented instructions.
 
-Outcome: Demonstrate real business logic.
+## Phase 6 — Project 2 and production fundamentals (Days 71–77)
+**Build:** Inventory and Order Management API. Products, stock, customers, orders, order items, stock validation, transaction-safe order creation, order status and history.
 
-## Phase 7: Job Preparation
-Days 78-90
+**Deliverables:** working core flows, tests for insufficient stock and failed order transactions, API docs.
 
-- Resume
-- LinkedIn
-- GitHub portfolio
-- Python interview questions
-- SQL interview questions
-- Backend interview questions
-- Mock interviews
-- Job applications
+**Gate:** explain what happens when an order fails halfway through and how the database remains consistent.
 
-Important: Start applying before this final phase.
-Continue building and improving projects throughout.
+## Phase 7 — Deployment, portfolio and job search (Days 78–90)
+**Do:** deploy at least one project; finish both READMEs; add architecture diagram or clear architecture explanation; clean GitHub; resume; LinkedIn; mock interviews; Python/SQL/backend revision; targeted applications and follow-ups.
 
-## Success Criteria
+**Deliverables:** two presentable repositories, one deployed API (ideally both), application tracker, interview notes, resume.
 
-- Can write Python independently.
-- Can build REST APIs.
-- Can work with PostgreSQL.
-- Can implement authentication.
-- Can write automated tests.
-- Can use Git and Docker.
-- Can explain two projects.
-- Can demonstrate skills in interviews.
+**Gate:** demonstrate a live API or reproducible local setup; explain design decisions, trade-offs, bugs and tests.
+
+---
+
+## Weekly breakdown
+
+| Week | Days | Main outcome |
+|---|---:|---|
+| 1 | 1–7 | Python basics, types, input/output, operators |
+| 2 | 8–14 | Conditions, loops, functions, collections, basic SQL |
+| 3 | 15–21 | Modules, exceptions, files, OOP introduction |
+| 4 | 22–28 | OOP practice, SQL joins, HTTP, Git |
+| 5 | 29–35 | FastAPI routes, parameters, request/response |
+| 6 | 36–42 | Pydantic, CRUD, validation, API docs |
+| 7 | 43–49 | PostgreSQL schema, SQLAlchemy models/sessions |
+| 8 | 50–56 | Relationships, CRUD persistence, Alembic, transactions |
+| 9 | 57–63 | Password hashing, authentication, authorization |
+| 10 | 64–70 | pytest, API testing, logging, Docker |
+| 11 | 71–77 | Inventory/order project and business rules |
+| 12 | 78–84 | Deployment, documentation, resume, mock interviews |
+| 13 | 85–90 | Applications, interview practice, portfolio polish |
+
+## Weekly review questions
+1. What can I now do without help?
+2. What did I build that runs?
+3. Which bugs did I diagnose and fix?
+4. What can I not yet explain?
+5. What is the next week's most important deliverable?
+6. How many focused hours did I actually complete?

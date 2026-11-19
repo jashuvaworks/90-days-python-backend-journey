@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>90-Day Backend Journey Tracker</title>
+<style>
+:root{color-scheme:light dark;--green:#16a34a;--line:#8886}*{box-sizing:border-box}
+body{font-family:system-ui,Arial,sans-serif;margin:0;padding:22px;background:Canvas;color:CanvasText}
+main{max-width:950px;margin:auto}h1{margin:0 0 8px}.muted{opacity:.72}
+.panel{border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0}
+.track{height:12px;background:#8883;border-radius:99px;overflow:hidden;margin:12px 0}.fill{height:100%;width:0;background:var(--green);transition:width .2s}
+.grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:8px}
+.day{min-height:54px;border:1px solid var(--line);border-radius:10px;background:transparent;color:inherit;font-weight:650;cursor:pointer}
+.day.done{background:var(--green);border-color:var(--green);color:white}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+button.action{border:1px solid var(--line);border-radius:9px;padding:10px 14px;background:transparent;color:inherit;cursor:pointer}
+@media(max-width:600px){body{padding:12px}.grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}.day{min-height:46px}}
+</style></head><body><main>
+<h1>My 90-Day Python Backend Journey</h1>
+<p class="muted">Click a day only after you studied, practised, and recorded your work. Completed days turn green.</p>
+<section class="panel" aria-live="polite"><strong id="count">0 of 90 days completed</strong><div class="track"><div class="fill" id="fill"></div></div><span id="percent" class="muted">0% complete</span></section>
+<section class="panel"><h2>Daily tracker</h2><div class="grid" id="grid"></div>
+<div class="actions"><button class="action" id="export">Download progress backup</button><button class="action" id="import">Import backup</button><button class="action" id="reset">Reset all days</button></div>
+<p class="muted">Progress is saved in this browser on this device. It does not automatically sync to GitHub. Download a backup periodically. To move progress to another browser, export then import the JSON backup.</p></section>
+</main><script>
+(()=>{const KEY="backend90tracker_v2";let done=new Set();function load(){try{const a=JSON.parse(localStorage.getItem(KEY)||"[]");if(Array.isArray(a))done=new Set(a.filter(x=>Number.isInteger(x)&&x>=1&&x<=90))}catch(e){}}
+const grid=document.getElementById("grid");for(let n=1;n<=90;n++){const b=document.createElement("button");b.className="day";b.textContent="Day "+n;b.dataset.day=n;b.addEventListener("click",()=>{done.has(n)?done.delete(n):done.add(n);save()});grid.appendChild(b)}
+function save(){localStorage.setItem(KEY,JSON.stringify([...done].sort((a,b)=>a-b)));render()}
+function render(){let n=done.size,p=Math.round(n/90*100);document.getElementById("count").textContent=n+" of 90 days completed";document.getElementById("fill").style.width=p+"%";document.getElementById("percent").textContent=p+"% complete";grid.querySelectorAll("button").forEach(b=>{let yes=done.has(+b.dataset.day);b.classList.toggle("done",yes);b.setAttribute("aria-pressed",String(yes))})}
+document.getElementById("export").onclick=()=>{let blob=new Blob([JSON.stringify({completedDays:[...done].sort((a,b)=>a-b)},null,2)],{type:"application/json"});let u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="90-day-progress-backup.json";a.click();URL.revokeObjectURL(u)};
+document.getElementById("import").onclick=()=>{let i=document.createElement("input");i.type="file";i.accept=".json,application/json";i.onchange=()=>{let f=i.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!Array.isArray(x.completedDays))throw Error();done=new Set(x.completedDays.filter(n=>Number.isInteger(n)&&n>=1&&n<=90));save()}catch(e){alert("That backup file is not valid.")}};r.readAsText(f)};i.click()};
+document.getElementById("reset").onclick=()=>{if(confirm("Reset all 90 days? Export a backup first if you may need it.")){done.clear();save()}};load();render()})();
+</script></body></html>
