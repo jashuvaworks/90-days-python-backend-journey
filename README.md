@@ -1,3 +1,30 @@
+
+# 🚀 My 90-Day Python Backend Developer Journey
+
+## 📊 My Daily Progress Tracker
+
+**90 Days. One Goal. Become a Python Backend Developer.**
+
+[🟢 OPEN MY INTERACTIVE 90-DAY TRACKER](https://jashuvaworks.github.io/90-days-python-backend-journey/tracker.html)
+
+Track all 90 days, mark completed days green, and monitor your progress.
+
+---
+
+## 🎯 My Goal
+
+Become job-ready for entry-level Python Backend Developer roles.
+
+**Technology Stack:**
+- Python
+- FastAPI
+- PostgreSQL
+- SQLAlchemy
+- Pydantic
+- Pytest
+- Docker
+- Git and GitHub
+
 # 90-Day Python Backend Developer Journey
 
 **Start:** 19 November 2026  
